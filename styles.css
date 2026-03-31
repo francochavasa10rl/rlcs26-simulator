@@ -30,7 +30,7 @@
 ========================= */
 body {
   margin: 0;
-  font-family: 'Bourgeois', sans-serif;
+  font-family: 'BourgeoisBold', sans-serif;
   background: radial-gradient(circle at top, #0f172a, #020617);
   color: var(--text);
   text-align: center;
