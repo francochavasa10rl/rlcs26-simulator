@@ -1,0 +1,40 @@
+body {
+  font-family: Arial;
+  background: #0d1117;
+  color: white;
+  text-align: center;
+}
+
+textarea {
+  width: 300px;
+  height: 200px;
+  background: #161b22;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  background: #238636;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.match {
+  border: 1px solid #30363d;
+  padding: 10px;
+  margin: 10px;
+}
+
+.team {
+  margin: 5px;
+}
+
+.bracket {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
