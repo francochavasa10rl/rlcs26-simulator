@@ -17,14 +17,14 @@
    VARIABLES
 ========================= */
 :root {
-  --bg: #0a0f1a;
-  --panel: #111827;
-  --panel2: #1f2937;
+  --bg: #020617;
+  --panel: #0f172a;
+  --panel2: #1e293b;
   --accent: #00e0ff;
   --accent2: #22c55e;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --border: #2a3441;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --border: #334155;
 }
 
 /* =========================
@@ -35,12 +35,13 @@ body {
   font-family: 'Bourgeois', sans-serif;
   background: radial-gradient(circle at top, #0f172a, #020617);
   color: var(--text);
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
+  margin: 20px 0;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 /* =========================
@@ -48,11 +49,11 @@ h1 {
 ========================= */
 #setup {
   width: 360px;
-  margin: 30px auto;
+  margin: 20px auto;
   background: var(--panel);
   padding: 20px;
   border-radius: 14px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
 }
 
 textarea {
@@ -63,13 +64,14 @@ textarea {
   color: var(--text);
   padding: 10px;
   border-radius: 8px;
+  resize: none;
 }
 
 /* =========================
    BOTONES
 ========================= */
 button {
-  margin-top: 10px;
+  margin: 5px;
   padding: 10px 14px;
   background: linear-gradient(135deg, #00e0ff, #0099ff);
   border: none;
@@ -86,51 +88,41 @@ button:hover {
 }
 
 /* =========================
+   CONTROLES
+========================= */
+#controls {
+  margin: 10px;
+}
+
+/* =========================
    SWISS
 ========================= */
 .swiss-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-}
-
-.record-group {
-  width: 230px;
-  background: var(--panel);
-  border-radius: 12px;
-  padding: 10px;
-}
-
-.record-title {
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: var(--accent);
+  gap: 20px;
 }
 
 .match {
-  background: var(--panel2);
-  border-radius: 8px;
-  margin-bottom: 10px;
-  padding: 8px;
+  background: var(--panel);
+  padding: 10px;
+  border-radius: 10px;
+  width: 220px;
+  border: 1px solid var(--border);
 }
 
 .team {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px;
+  padding: 8px;
+  margin: 5px 0;
+  background: var(--panel2);
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .team:hover {
-  background: rgba(255,255,255,0.08);
-}
-
-.seed {
-  font-size: 12px;
-  color: var(--muted);
+  background: rgba(255,255,255,0.1);
 }
 
 /* =========================
@@ -152,7 +144,7 @@ button:hover {
   position: relative;
 }
 
-/* Línea vertical */
+/* línea vertical */
 .round::after {
   content: "";
   position: absolute;
@@ -163,7 +155,7 @@ button:hover {
   background: var(--border);
 }
 
-/* Match */
+/* match */
 .bracket-match {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -173,7 +165,7 @@ button:hover {
   position: relative;
 }
 
-/* Conectores horizontales */
+/* línea horizontal */
 .bracket-match::after {
   content: "";
   position: absolute;
@@ -184,7 +176,7 @@ button:hover {
   background: var(--border);
 }
 
-/* Teams */
+/* teams */
 .bracket-team {
   padding: 8px;
   margin: 4px 0;
@@ -198,17 +190,21 @@ button:hover {
   background: rgba(255,255,255,0.1);
 }
 
-/* Highlight winner */
-.winner {
+/* winner highlight */
+.bracket-team.winner {
   background: linear-gradient(90deg, #00e0ff, #22c55e);
   color: black;
   font-weight: 700;
 }
 
 /* =========================
-   CONTROLES
+   SCROLL
 ========================= */
-#controls {
-  text-align: center;
-  margin-bottom: 30px;
+.bracket::-webkit-scrollbar {
+  height: 8px;
+}
+
+.bracket::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
 }
